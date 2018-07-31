@@ -1,13 +1,8 @@
 
 <!DOCTYPE html>
 <html>
-<title>Helping the Homeless</title>
+<title>W3.CSS Template</title>
 <meta charset="UTF-8">
-<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
@@ -32,29 +27,39 @@
   <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
   <a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Logo</a>
 
+  <a href="#team" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Team</a>
+  <a href="#work" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Work</a>
+  <a href="#pricing" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Price</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+    <button class="w3-button" title="Notifications">Dropdown <i class="fa fa-caret-down"></i></button>
+    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+      <a href="#" class="w3-bar-item w3-button">Link</a>
+      <a href="#" class="w3-bar-item w3-button">Link</a>
+      <a href="#" class="w3-bar-item w3-button">Link</a>
+    </div>
+  </div>
+  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a>
+ </div>
+
   <a href="#about" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About </a>
   <a href="#ourTeam" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Our Team</a>
   <a href="#locations" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Locations</a>
   <a href="#products" class="w3-bar-item w3-button w3-hide-small w3-hover-white"> Products</a>
-  <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-white"> Contact Us</a>
-  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a>
- </div>
-
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
-    <a href="#about" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About </a>
-    <a href="#ourTeam" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Our Team</a>
-    <a href="#locations" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Locations</a>
-    <a href="#products" class="w3-bar-item w3-button w3-hide-small w3-hover-white"> Products</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-white"> Contact Us</a>
-
+    <a href="#team" class="w3-bar-item w3-button">Team</a>
+    <a href="#work" class="w3-bar-item w3-button">Work</a>
+    <a href="#pricing" class="w3-bar-item w3-button">Price</a>
+    <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+    <a href="#" class="w3-bar-item w3-button">Search</a>
   </div>
 </div>
 
 
 <!-- Image Header -->
-<div class="w3-display-container w3-animate-opacity">
+<div class="Image Header">
   <img src="women.jpg" alt="A elderly women laying on the floor around trash cans" style="width:100%;min-height:350px;max-height:600px;">
   </div>
 </div>
@@ -78,13 +83,9 @@
     </footer>
   </div>
 </div>
-<!-- About container -->
-<div class = "w3-container w3-padding-64 w3-center" id="about">
-  <h2> ABOUT</h2>
-</div>
 
 <!-- Team Container -->
-<div class="w3-container w3-padding-64 w3-center" id="ourTeam">
+<div class="w3-container w3-padding-64 w3-center" id="team">
 <h2>OUR TEAM</h2>
 <p>Meet the team - our office rats:</p>
 
@@ -271,7 +272,22 @@
 </div>
 
 <!-- Google Maps -->
-<div id="googleMap" style="width:100%;height:420px;"></div>
+<h7>location</h7>
+<!-- <div id="map" style="width:400px;height:400px">
+<script src="https://www.google.com/maps/place/Chicago,+IL/@41.8726872,-87.7327886,10.66z/data=!4m5!3m4!1s0x880e2c3cd0f4cbed:0xafe0a6ad09c0c000!8m2!3d41.8781136!4d-87.6297982"></script> -->
+<script>
+function myMap() {
+var mapOptions = {
+    center: new google.maps.LatLng(51.5, -0.12),
+    zoom: 10,
+    mapTypeId: google.maps.MapTypeId.HYBRID
+}
+var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+<!--
 <script>
 function myMap()
 {
@@ -311,6 +327,8 @@ Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
     <i class="fa fa-chevron-circle-up"></i></span></a>
   </div>
 </footer>
+<h7>location</h7>
+<div id="map">My map will go here</div>
 
 <script>
 // Script for side navigation
