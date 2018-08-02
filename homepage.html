@@ -348,23 +348,23 @@ link to abc7 website- <a href = "http://abc7chicago.com/news/chicagos-new-face-o
 
 <!-- Google Maps -->
 <!-- Reference to the Bing Maps SDK -->
-  <script type='text/javascript'
-          src='http://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=AjZ2_xLMCcxzNxxQZCCrXzgXNQ3SmprMNJSdKIDDkyzW0sQ_E8I9nqU-eENPYBKj'
-          async defer></script>
+<script type='text/javascript'
+        src='http://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=AjZ2_xLMCcxzNxxQZCCrXzgXNQ3SmprMNJSdKIDDkyzW0sQ_E8I9nqU-eENPYBKj'
+        async defer></script>
 
-  <script type='text/javascript'>
+<script type='text/javascript'>
 
-  function GetMap()
-  {
-    var dic = {
-      latitude: 41.8781,
-      longitude: -87.6298,
-      title:'Benefit for Chicago Period Proect',
-      date:'December 5, 2018',
-      address:"Emporium Logan Square, North Milwaukee Avenue, Chicago, IL, USA",
-      color: "purple"
-    }
-    var map = new Microsoft.Maps.Map('#myMap', {
+function GetMap()
+{
+  var dic = {
+    latitude: 41.8781,
+    longitude: -87.6298,
+    title:'Benefit for Chicago Period Proect',
+    date:'December 5, 2018',
+    address:"Emporium Logan Square, North Milwaukee Avenue, Chicago, IL, USA",
+    color: "purple"
+  }
+  var map = new Microsoft.Maps.Map('#myMap', {
 credentials: 'AjZ2_xLMCcxzNxxQZCCrXzgXNQ3SmprMNJSdKIDDkyzW0sQ_E8I9nqU-eENPYBKj',
 center: new Microsoft.Maps.Location(41.8781, -87.6298),
 mapTypeId: Microsoft.Maps.MapTypeId.aerial,
@@ -379,31 +379,15 @@ color: dic.color,
 });
 
 map.entities.push(pin);
-    Microsoft.Maps.Events.addHandler(pin, 'mouseover', function (e) {
-        e.target.setOptions({title:dic.address})
-      })
-      Microsoft.Maps.Events.addHandler(pin, 'mouseout', function (e){
-        e.target.setOptions({title:dic.title})
-      })
-  }
-  </script>
-  <div id="myMap" style="position:relative;width:100%;height:25%;"></div>
-
-<!-- Reference to the Bing Maps SDK -->
-<script type='text/javascript'
-        src='http://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=AjZ2_xLMCcxzNxxQZCCrXzgXNQ3SmprMNJSdKIDDkyzW0sQ_E8I9nqU-eENPYBKj'
-        async defer></script>
-
-<script type='text/javascript'>
-function GetMap()
-{
-  var map = new Microsoft.Maps.Map('#myMap', {
-credentials: 'AjZ2_xLMCcxzNxxQZCCrXzgXNQ3SmprMNJSdKIDDkyzW0sQ_E8I9nqU-eENPYBKj',
-center: new Microsoft.Maps.Location(41.8781, -87.6298),
-mapTypeId: Microsoft.Maps.MapTypeId.aerial,
-zoom: 10
-});
-var center = map.getCenter();
+  Microsoft.Maps.Events.addHandler(pin, 'mouseover', function (e) {
+      e.target.setOptions({title:dic.address})
+    })
+    Microsoft.Maps.Events.addHandler(pin, 'mouseout', function (e){
+      e.target.setOptions({title:dic.title})
+    })
+}
+</script>
+<div id="myMap" style="position:relative;width:600px;height:400px;"></div>
 <!-- Footer -->
 <footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
   <h4>Follow Us</h4>
