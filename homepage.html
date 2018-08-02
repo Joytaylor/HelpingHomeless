@@ -36,8 +36,12 @@
  <div class="w3-bar w3-theme-d2 w3-left-align">
 
   <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+<<<<<<< HEAD
   <!-- <a href="#" class="w3-bar-item w3-button w3-red"><i /i>Logo</a> -->
    <a href="#" class="w3-bar-item w3-button w3-red"><img src="earth.png" alt="earth" width="50"height="40"></a>
+=======
+  <a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Logo</a>
+>>>>>>> b757504d7e8fd56ab4ea293bf404cda41afb77bb
 
   <a href="#about" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About </a>
   <a href="#ourTeam" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Our Team</a>
@@ -62,10 +66,32 @@
 
 
 <!-- Image Header -->
+
+<style>
+.mySlides {display:none;}
+</style>
 <div class="Image Header">
-  <img src="people.jpg" style="width:100%;min-height:780px;max-height:600px;">
+  <img class="mySlides" src="http://2.bp.blogspot.com/-MlZLSK8AVIw/Tx9wJZUAg7I/AAAAAAAAACA/3QItybKeU-o/s1600/homeless_people_by_joey_lawrence_03.jpg" style="width:100%">
+  <img class="mySlides" src="http://www.pxleyes.com/images/contests/poverty/fullsize/Homeless-4d70b008109ac_hires.jpg" style="width:100%">
+  <img class="mySlides" src="https://hopbereniceabbott.files.wordpress.com/2008/12/8-lk.jpg" style="width:100%">
 </div>
 
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
 <!--Add the logo on the center of the image-->
 
 
@@ -79,7 +105,7 @@
     </header>
     <div class="w3-container">
       <p></p>
-      <p> <a class="w3-text-teal" href="/w3css/default.asp">W3.CSS Tutorial</a> to learn more!</p>
+      <p> <a class="w3-text-teal" href="/w3css/default.asp"></a></p>
     </div>
     <footer class="w3-container w3-teal">
       <p></p>
