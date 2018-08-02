@@ -286,13 +286,7 @@ link to abc7 website- <a href = "http://abc7chicago.com/news/chicagos-new-face-o
         <li class="w3-theme">
           <p class="w3-xlarge">Sam's Club</p>
         </li>
-
-<<<<<<< HEAD
         <li class="w3-padding-16"><a href = "https://www.samsclub.com/sams/search/searchResults.jsp?searchTerm=Womens%20pads&searchCategoryId=all">Wmen's Pads</a></li>
-=======
-
-        <li class="w3-padding-16"><a href = "https://www.samsclub.com/sams/search/searchResults.jsp?searchTerm=Womens%20pads&searchCategoryId=all">Women's Pads</a></li>
->>>>>>> a8110bd2fbcffc2223a4fd1033b3185afc5367e5
         <li class="w3-padding-16"><a href = "https://www.samsclub.com/sams/search/searchResults.jsp?searchTerm=Tampons&searchCategoryId=all&xid=hdr_search-typeahead_Tampons">Tampons</a></li>
         <li class="w3-padding-16"><a href = "https://www.samsclub.com/sams/search/searchResults.jsp?searchTerm=toilet%20paper&searchCategoryId=all&xid=hdr_search-typeahead_toilet%20paper">Toilet Paper</a></li>
         <li class="w3-padding-16"><a href = "https://www.samsclub.com/sams/search/searchResults.jsp?searchTerm=soap&searchCategoryId=all">Soap</a></li>
@@ -301,9 +295,6 @@ link to abc7 website- <a href = "http://abc7chicago.com/news/chicagos-new-face-o
         <li class="w3-padding-16"><a href = "https://www.samsclub.com/sams/search/searchResults.jsp?searchTerm=lip%20balm&searchCategoryId=all">Lip Balm</a></li>
         <li class="w3-padding-16"><a href = "https://www.samsclub.com/sams/search/searchResults.jsp?searchTerm=gum&searchCategoryId=all">Gum</a></li>
         <li claas="w3-padding-16"><a href = "https://www.samsclub.com/sams/search/searchResults.jsp?searchTerm=Diva%20cups&searchCategoryId=all">Diva Cups</a></li>
-
-        </li>
-
         </li>
       </ul>
     </div>
@@ -388,7 +379,47 @@ link to abc7 website- <a href = "http://abc7chicago.com/news/chicagos-new-face-o
 </div>
 
 <!-- Google Maps -->
-<meta charset="utf-8" />
+<!-- Reference to the Bing Maps SDK -->
+  <script type='text/javascript'
+          src='http://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=AjZ2_xLMCcxzNxxQZCCrXzgXNQ3SmprMNJSdKIDDkyzW0sQ_E8I9nqU-eENPYBKj'
+          async defer></script>
+
+  <script type='text/javascript'>
+
+  function GetMap()
+  {
+    var dic = {
+      latitude: 41.8781,
+      longitude: -87.6298,
+      title:'Benefit for Chicago Period Proect',
+      date:'December 5, 2018',
+      address:"Emporium Logan Square, North Milwaukee Avenue, Chicago, IL, USA",
+      color: "purple"
+    }
+    var map = new Microsoft.Maps.Map('#myMap', {
+credentials: 'AjZ2_xLMCcxzNxxQZCCrXzgXNQ3SmprMNJSdKIDDkyzW0sQ_E8I9nqU-eENPYBKj',
+center: new Microsoft.Maps.Location(41.8781, -87.6298),
+mapTypeId: Microsoft.Maps.MapTypeId.aerial,
+zoom: 10
+});
+//push pin code
+var pin = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(dic.latitude, dic.longitude), {
+title: dic.title,
+subTitle: dic.date,
+text: '1',
+color: dic.color,
+});
+
+map.entities.push(pin);
+    Microsoft.Maps.Events.addHandler(pin, 'mouseover', function (e) {
+        e.target.setOptions({title:dic.address})
+      })
+      Microsoft.Maps.Events.addHandler(pin, 'mouseout', function (e){
+        e.target.setOptions({title:dic.title})
+      })
+  }
+  </script>
+  <div id="myMap" style="position:relative;width:100%;height:25%;"></div>
 
 <!-- Reference to the Bing Maps SDK -->
 <script type='text/javascript'
