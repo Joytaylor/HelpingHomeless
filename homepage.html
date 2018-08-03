@@ -1,12 +1,15 @@
 
 <!DOCTYPE html>
 <html>
+</head>
 <title></title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
 <body id="myPage">
   <style>
 
@@ -135,8 +138,7 @@ link to abc7 website- <a href = "http://abc7chicago.com/news/chicagos-new-face-o
 
 <!-- My team photos! -->
 <div class="w3-container w3-padding-64 w3-center" id="ourTeam">
-<h2>OUR TEAM</h2>
-
+<h2>OUR TEAM</h2>=
 <div class="w3-row" ><br>
 
 <div class="w3-quarter">
@@ -159,7 +161,7 @@ link to abc7 website- <a href = "http://abc7chicago.com/news/chicagos-new-face-o
 </div>
 
 <div class="w3-quarter">
-  <img src="img.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <img src="img.jpg" alt="Boss" style="width:30%" class="w3-circle w3-hover-opacity">
   <h3>Gabriela Pesantez</h3>
   <p>Navigation Expert</p>
 </div>
@@ -414,7 +416,59 @@ map.entities.push(pin);
   </div>
 </div>
 
-<!-- Footer -->
+<!-- Google Maps -->
+  <script type='text/javascript'
+          src='http://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=AjZ2_xLMCcxzNxxQZCCrXzgXNQ3SmprMNJSdKIDDkyzW0sQ_E8I9nqU-eENPYBKj'
+          async defer></script>
+
+  <script type='text/javascript'>
+
+  function GetMap()
+  {
+    var dic = {
+      latitude: 41.8781,
+      longitude: -87.6298,
+      title:'Benefit for Chicago Period Proect',
+      date:'December 5, 2018',
+      address:"Emporium Logan Square, North Milwaukee Avenue, Chicago, IL, USA",
+      color: "purple"
+    }
+    var map = new Microsoft.Maps.Map('#myMap', {
+credentials: 'AjZ2_xLMCcxzNxxQZCCrXzgXNQ3SmprMNJSdKIDDkyzW0sQ_E8I9nqU-eENPYBKj',
+center: new Microsoft.Maps.Location(41.8781, -87.6298),
+mapTypeId: Microsoft.Maps.MapTypeId.aerial,
+zoom: 10
+});
+//push pin code
+var pin = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(dic.latitude, dic.longitude), {
+title: dic.title,
+subTitle: dic.date,
+text: '1',
+color: dic.color,
+});
+
+map.entities.push(pin);
+    Microsoft.Maps.Events.addHandler(pin, 'mouseover', function (e) {
+        e.target.setOptions({title:dic.address})
+      })
+      Microsoft.Maps.Events.addHandler(pin, 'mouseout', function (e){
+        e.target.setOptions({title:dic.title})
+      })
+  }
+  </script>
+  <div id="myMap" style="position:relative;width:70%;height:400px; margin-left:15%; margin-right:15%"></div>
+<script type='text/javascript'>
+function GetMap()
+{
+  var map = new Microsoft.Maps.Map('#myMap', {
+credentials: 'AjZ2_xLMCcxzNxxQZCCrXzgXNQ3SmprMNJSdKIDDkyzW0sQ_E8I9nqU-eENPYBKj',
+center: new Microsoft.Maps.Location(41.8781, -87.6298),
+mapTypeId: Microsoft.Maps.MapTypeId.aerial,
+zoom: 10
+});
+var center = map.getCenter();
+</script>
+!-- Footer -->
 <footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
   <h4>Follow Us</h4>
   <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
