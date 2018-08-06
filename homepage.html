@@ -2,7 +2,8 @@
 <!DOCTYPE html>
 <html>
 
-<title></title>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Antic' rel='stylesheet'>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -17,9 +18,12 @@
     border-left: 10px solid black;
     border-right: 10px solid black;
     background-color: lightgrey;
-    font-family: "Vintage"
+    font-family: "Antic"
 
 
+  }
+  body {
+    font-family: 'Antic';font-size:22px
   }
 
 </style>
@@ -42,7 +46,7 @@
   <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
 
     <!-- <a href="#" class="w3-bar-item w3-button w3-red"><i /i>Logo</a> -->
-  <font size="3"><a href="#" class="w3-bar-item w3-button w3-white"><img src="earth2.png" alt="earth" width="50"height="40"></a>
+  <font size="3"><a href="#" class="w3-bar-item w3-button w3-white"><img src="flowers.png" alt="earth" width="50"height="40"></a>
   <button class="w3-button w3-pink"><a href="#about" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About </a></button>
   <button class="w3-button w3-black"><a href="#ourTeam" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Our Team</a></button>
   <button class="w3-button w3-pink"><a href="#locations" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Locations</a></button>
@@ -72,14 +76,18 @@
 div.square {
   border: solid 50px Gray;
 
+
 }
 </style>
 <div class="logo"></div>
 <div class="Image Header">
 <div class="square">
-  <img class="mySlides" src="https://ssl.c.photoshelter.com/img-get2/I0000OtQVnLG1Jjc/fit=1000x750/020911-Homeless-Women-07RH.jpg" style="width:100%;height:1000px">
+
+  <div>
+  <img  class="mySlides"src="https://ssl.c.photoshelter.com/img-get2/I0000OtQVnLG1Jjc/fit=1000x750/020911-Homeless-Women-07RH.jpg" style="width:100%;height:1000px">
   <img class="mySlides" src="https://s3.amazonaws.com/wapopartners.com/wweek-wp/wp-content/uploads/2016/02/16154721/20150510_WW_Homeless_008.jpg" style="width:100%;height:1000px">
-  <img class="mySlides" src="https://nursing322sp10.files.wordpress.com/2010/03/12.jpg" style="width:100%;height:1000px">
+  <img class="mySlides"src="https://nursing322sp10.files.wordpress.com/2010/03/12.jpg" style="width:100%;height:1000px">
+
 </div>
 
 
@@ -120,7 +128,7 @@ function carousel() {
   </div>
 </div>
 <br>
-<center><font size= "6"><p class="round3" class="round2"><font size= "15">“</font><font color="black">People who are homeless are often at risk of infectious diseases—like hepatitis A, B, and C, tuberculosis, and HIV/AIDS—due to poor nutrition and hygiene..</font><font size= "10">”</font></p></font></center>
+<center><p class="round3"><font size= "15">“</font><font color="black"><u>People who are homeless are often at risk of infectious diseases—like hepatitis A, B, and C, tuberculosis, and HIV/AIDS—due to poor nutrition and hygiene..</u><font size= "10">”</font></center>
 
 <!-- About container -->
 <div class = "w3-container w3-padding-64 w3-center" id="about">
@@ -175,6 +183,12 @@ link to abc7 website- <a href = "http://abc7chicago.com/news/chicagos-new-face-o
   </div>
 </div>
 
+</div>
+
+<!-- Container -->
+<div class="w3-container" style="position:relative">
+  <a onclick="w3_open()" class="w3-button w3-xlarge w3-circle w3-teal"
+  style="position:absolute;top:-28px;right:24px">+</a>
 </div>
 
 <!-- Google Maps -->
