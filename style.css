@@ -1,12 +1,8 @@
 .ourTeam2{
   margin: 0 auto;
   width: 100px;
-
-  .center-div
-  {
-       margin: 0 auto;
-       width: 100px;
-  }
-.mySlides{
-  text-align: center;
+/* }
+<p align="right">A right-aligned paragraph.</p> */
+.w3-top {
+    font-family: "Times New Roman", Times, serif;
 }
