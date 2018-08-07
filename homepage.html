@@ -28,8 +28,20 @@
   body {
     font-family: 'Antic';font-size:22px
   }
+<<<<<<< HEAD
 
 
+=======
+  nav{
+    position: fixed;
+    background-color: white;
+    width:100%;
+    z-index: 1;
+  }
+.mymap{
+  z-index: 0;
+}
+>>>>>>> 3d53e9b44a6ed7495ad33b310e9ed2bdf5f0f255
 </style>
 <!-- Sidebar on click -->
 <nav class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left w3-xxlarge" style="display:none;z-index:2" id="mySidebar">
@@ -37,38 +49,43 @@
     <i class="fa fa-remove"></i>
   </a>
   <a href="#about" class="w3-bar-item w3-button">About</a>
-  <a href="#ourTeam" class="w3-bar-item w3-button">Our Team</a>
   <a href="#locations" class="w3-bar-item w3-button">Locations</a>
   <a href="#products" class="w3-bar-item w3-button">Products</a>
-  <a href="#contact" class="w3-bar-item w3-button">Contact Us</a>
+  <a href="#ourTeam" class="w3-bar-item w3-button">Our Team</a>
 </nav>
 
 <!-- Navbar -->
 <!-- <div class="w3-top">
  <div class="w3-bar w3-theme-d2 w3-left-align"> -->
-
+<nav>
   <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
 
     <!-- <a href="#" class="w3-bar-item w3-button w3-red"><i /i>Logo</a> -->
   <font size="3"><a href="#" class="w3-bar-item w3-button w3-white"><img src="home.png" alt="earth" width="50"height="40"></a>
   <button class="w3-button w3-black"><a href="#about" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About </a></button>
+  <button class="w3-button w3-pink"><a href="#locations" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Locations</a></button>
+<<<<<<< HEAD
+  <button class="w3-button w3-black"><a href="#products" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Products</a></button></font>
   <button class="w3-button w3-pink"><a href="#ourTeam" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Our Team</a></button>
-  <button class="w3-button w3-black"><a href="#locations" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Locations</a></button>
-  <button class="w3-button w3-pink"><a href="#products" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Products</a></button></font>
+</nav>
+=======
+  <button class="w3-button w3-black"><a href="#products" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Products</a></button>
+  <button class="w3-button w3-pink"><a href="#ourTeam" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Our Team</a></button></font>
  </div>
 
 
 
  </div>
+>>>>>>> 8d802e2b841aa739d2030622f8403a4029ca02e6
 
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
 
     <a href="#about" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About </a>
-    <a href="#ourTeam" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Our Team</a>
     <a href="#locations" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Locations</a>
     <a href="#products" class="w3-bar-item w3-button w3-hide-small w3-hover-white"> Products</a>
+    <a href="#ourTeam" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Our Team</a>
 
   </div>
 </div>
@@ -186,17 +203,13 @@ function carousel() {
 
 </div>
 
-<!-- Container -->
-<div class="w3-container" style="position:relative">
-  <a onclick="w3_open()" class="w3-button w3-xlarge w3-circle w3-teal"
-  style="position:absolute;top:-28px;right:24px">+</a>
-</div>
+
 
 <!-- Google Maps -->
-<br>
-<br>
-<h2 id ="locations"> Locations </h2>
-<br>
+
+<div class = "w3-container w3-padding-64 w3-center" id="locations">
+<h2 > Locations </h2>
+
   <script type='text/javascript'
           src='http://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=AjZ2_xLMCcxzNxxQZCCrXzgXNQ3SmprMNJSdKIDDkyzW0sQ_E8I9nqU-eENPYBKj'
           async defer></script>
@@ -236,13 +249,15 @@ map.entities.push(pin);
       })
   }
   </script>
+
+</div>
   <div id="myMap" style="position:relative;width:70%;height:400px; margin-left:15%; margin-right:15%"></div>
 
 
 <!-- Pricing Row -->
 <div class="w3-row-padding w3-center w3-padding-64" id="products">
     <h2>Products</h2>
-    <p>Below are some suggestions on places you could buy produts for the homeless and if you dont know what to buy, we have some suggestions down there to help you out!</p><br>
+    <p>Below are some suggestions on places you could buy produts for the homeless and if you dont know what to buy, we have some suggestions too to help you out!</p><br>
     <div class="w3-third w3-margin-bottom">
       <ul class="w3-ul w3-border w3-hover-shadow">
         <li class="w3-theme">
@@ -381,18 +396,18 @@ function openNav() {
     }
 }
 </script>
-
+</div>
 <!-- My team photos! -->
 <div class="w3-container w3-padding-64 w3-center" id="ourTeam">
 <h2>OUR TEAM</h2>
 <div class="w3-row" ><br>
-
+<!-- Joy -->
 <div class="w3-quarter">
   <img src="images/Joy.JPG" style="width:55%" class="w3-circle w3-hover-opacity">
   <p>Joy Taylor</p>
 
 </div>
-
+<!-- rosie -->
 <div class="w3-quarter">
   <img src="images/Rosie.jpg" style="width:55%" class="w3-circle w3-hover-opacity">
   <p>Rosie Talavera</p>
@@ -405,13 +420,13 @@ function openNav() {
   <p>Jaylene Nunez</p>
 
 </div>
-
+<!-- Gabby -->
 <div class="w3-quarter">
   <img src="img.jpg" alt="Boss" style="width:55%" class="w3-circle w3-hover-opacity">
-  <p>Gabriela Pesantez</p>
+  <p> Hello my name is Gabriela I am 16 year old and I am part of the Girls Who Code comunity.</p<
 
 </div>
-
+<!-- Jenny -->
 <div class="w3-container w3-padding-64 w3-center" id="ourTeam2">
 <div class="w3-cell-middle">
   <img src="images/IMG_1526.JPG" alt="Boss"style="width:15%" class="w3-circle w3-hover-opacity">
@@ -422,7 +437,7 @@ function openNav() {
 
 <!-- Footer -->
   <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
-    <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>
+    <span class="w3-text w3-padding w3-pink w3-hide-small">Go To Top</span>
     <a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
     <i class="fa fa-chevron-circle-up"></i></span></a>
   </div>
