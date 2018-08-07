@@ -3,7 +3,7 @@
 <html>
 
 <head>
-  <h1><img src="flowers.png"height="80"width="80"><center>Road to Hygiene</center></h1>
+  <h1><img src="flowers.png"height="120"width="120" align="middle"><center>Road to Hygiene</center></h1>
   <link href='https://fonts.googleapis.com/css?family=Antic' rel='stylesheet'>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,6 +14,11 @@
 </head>
 <body id="myPage">
   <style>
+  img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
   h1 {
     font-family: 'Antic'
   }
@@ -39,22 +44,11 @@
   z-index: 0;
 }
 </style>
-<!-- Sidebar on click -->
-<nav class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left w3-xxlarge" style="display:none;z-index:2" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-display-topright w3-text-teal">Close
-    <i class="fa fa-remove"></i>
-  </a>
-  <a href="#about" class="w3-bar-item w3-button">About</a>
-  <a href="#ourTeam" class="w3-bar-item w3-button">Our Team</a>
-  <a href="#locations" class="w3-bar-item w3-button">Locations</a>
-  <a href="#products" class="w3-bar-item w3-button">Products</a>
-  <a href="#contact" class="w3-bar-item w3-button">Contact Us</a>
-</nav>
 
 <!-- Navbar -->
 <!-- <div class="w3-top">
  <div class="w3-bar w3-theme-d2 w3-left-align"> -->
-
+<nav>
   <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
 
     <!-- <a href="#" class="w3-bar-item w3-button w3-red"><i /i>Logo</a> -->
@@ -199,10 +193,11 @@ function carousel() {
 
 
 <!-- Google Maps -->
+
+<div class = "w3-container w3-padding-64 w3-center" id ="locations">
+<h2> Locations </h2>
 <br>
-<br>
-<h2 id ="locations"> Locations </h2>
-<br>
+
   <script type='text/javascript'
           src='http://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=AjZ2_xLMCcxzNxxQZCCrXzgXNQ3SmprMNJSdKIDDkyzW0sQ_E8I9nqU-eENPYBKj'
           async defer></script>
@@ -242,6 +237,7 @@ map.entities.push(pin);
       })
   }
   </script>
+  <div>
   <div id="myMap" style="position:relative;width:70%;height:400px; margin-left:15%; margin-right:15%"></div>
 
 
