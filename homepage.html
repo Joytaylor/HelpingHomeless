@@ -3,7 +3,7 @@
 <html>
 
 <head>
-  <h1><img src="main.png"height="150"width="150" align="middle"><center></center></h1>
+  <h1><img src="main.png"height="200"width="800" align="middle"><center></center></h1>
   <link href='https://fonts.googleapis.com/css?family=Antic' rel='stylesheet'>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,6 +14,23 @@
 </head>
 <body id="myPage">
   <style>
+  .dropdown {
+      position: relative;
+      display: inline-block;
+  }
+  .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+
+  }
+
+  .dropdown:hover .dropdown-content {
+      display: block;
+  }
   img{
     display: block;
     margin-left: auto;
@@ -389,9 +406,12 @@ function openNav() {
 <h2>OUR TEAM</h2>
 <div class="w3-row" ><br>
 
-<div class="w3-quarter">
-  <img src="images/Joy.JPG" style="width:55%" class="w3-circle w3-hover-opacity">
-  <p>Joy Taylor</p>
+<div class="dropdown">
+  
+
+  <div class="w3-quarter">
+    <img src="images/Joy.JPG" style="width:55%" class="w3-circle w3-hover-opacity">
+      <p>Joy Taylor</p>
 
 </div>
 
@@ -402,23 +422,26 @@ function openNav() {
 </div>
 
 <!--JAYLENE-->
-<div class="w3-quarter">
-  <img src="images/unnamed.jpg" alt="Picture"style="width:55%" class="w3-circle w3-hover-opacity">
-  <p>Jaylene Nunez</p>
+  <div class="w3-quarter">
+    <img src="images/unnamed.jpg" alt="Picture"style="width:55%" class="w3-circle w3-hover-opacity">
+      <p>Jaylene Nunez</p>
 
-</div>
+  </div>
 
-<div class="w3-quarter">
-  <img src="img.jpg" alt="Boss" style="width:55%" class="w3-circle w3-hover-opacity">
-  <p>Gabriela Pesantez</p>
+  <div class="w3-quarter">
 
-</div>
+        <img src="img.jpg" alt="Boss" style="width:55%" class="w3-circle w3-hover-opacity">
+          <p>Gabriela Pesantez</p>
 
-<div class="w3-container w3-padding-64 w3-center" id="ourTeam2">
-<div class="w3-cell-middle">
-  <img src="images/IMG_1526.JPG" alt="Boss"style="width:15%" class="w3-circle w3-hover-opacity">
-  <p>Jenny Zacarias</p>
-</div>
+  </div>
+
+  <div class="w3-container w3-padding-64 w3-center" id="ourTeam2">
+    <div class="w3-cell-middle">
+          <img src="images/IMG_1526.JPG" alt="Boss"style="width:15%" class="w3-circle w3-hover-opacity">
+            <p>Jenny Zacarias</p>
+
+  </div>
+  </div>
 </div>
 
 <!-- Footer -->
